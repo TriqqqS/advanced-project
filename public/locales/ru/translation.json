@@ -1,6 +1,9 @@
 {
   "Translation test": "Тест перевода",
   "Translate": "Перевод",
-  "Main page": "Главная страница",
-  "langswitcher": "English"
+  "langswitcher": "English",
+  "Page not found": "Страница не найдена",
+  "Something went wrong!": "Что-то пошло не так!",
+  "Refresh a page": "Обновить страницу",
+  "Throw error": "Выбросить ошибку"
 }

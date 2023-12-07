@@ -1,6 +1,9 @@
 {
   "Translation test": "Translation test",
   "Translate": "Translate",
-  "Main page": "Main page",
-  "langswitcher": "Русский"
+  "langswitcher": "Русский",
+  "Page not found": "Page not found",
+  "Something went wrong!": "Something went wrong!",
+  "Refresh a page": "Refresh a page",
+  "Throw error": "Throw error"
 }
