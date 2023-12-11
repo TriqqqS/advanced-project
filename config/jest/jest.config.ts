@@ -6,6 +6,10 @@
 import type { Config } from "jest";
 
 const config: Config = {
+  moduleNameMapper: {
+    "\\.(svg)$": "<rootDir>config/jest/jestEmptyComponent.tsx",
+    "\\.(s?css)$": "identity-obj-proxy",
+  },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -75,6 +79,8 @@ const config: Config = {
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: ["node_modules"],
 
+  modulePaths: ["<rootDir>src/"],
+
   // An array of file extensions your modules use
   moduleFileExtensions: ["js", "mjs", "cjs", "jsx", "ts", "tsx", "json", "node"],
 
@@ -126,7 +132,7 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ["<rootDir>config/jest/jest-setup.ts"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
