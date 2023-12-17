@@ -2,8 +2,10 @@
   "Translation test": "Тест перевода",
   "Translate": "Перевод",
   "langswitcher": "English",
+  "langswitcher_short": "EN",
   "Page not found": "Страница не найдена",
   "Something went wrong!": "Что-то пошло не так!",
   "Refresh a page": "Обновить страницу",
-  "Throw error": "Выбросить ошибку"
+  "Throw error": "Выбросить ошибку",
+  "Toggle": "Переключить"
 }

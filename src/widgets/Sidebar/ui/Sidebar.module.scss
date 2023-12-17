@@ -6,18 +6,32 @@
   transition: width 0.3s;
 }
 
-.collapsed {
-  width: var(--sidebar-width-collapsed);
-}
-
 .switchers {
   position: absolute;
   bottom: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
 .themeswitcher {
   margin-right: 20px;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .switchers {
+    flex-direction: column;
+  }
+  .themeswitcher {
+    margin-right: 0;
+  }
+}
+
+.collapseBtn {
+  position: absolute;
+  bottom: 32px;
+  right: -32px;
 }
