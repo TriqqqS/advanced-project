@@ -1,6 +1,8 @@
 .sidebar {
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
+  padding-left: 28px;
+  padding-top: 20px;
   background: var(--inverted-bg-color);
   position: relative;
   transition: width 0.3s;
@@ -9,6 +11,7 @@
 .switchers {
   position: absolute;
   bottom: 20px;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +20,34 @@
 
 .themeswitcher {
   margin-right: 20px;
+}
+
+.collapseBtn {
+  position: absolute;
+  bottom: 32px;
+  right: -32px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  // width: fit-content;
+  height: 32px;
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 20px;
+  fill: var(--inverted-primary-color);
+}
+
+.link {
+  opacity: 1;
 }
 
 .collapsed {
@@ -28,10 +59,12 @@
   .themeswitcher {
     margin-right: 0;
   }
-}
-
-.collapseBtn {
-  position: absolute;
-  bottom: 32px;
-  right: -32px;
+  .link {
+    opacity: 0;
+    width: 0;
+    pointer-events: none;
+  }
+  .icon {
+    margin-right: 0;
+  }
 }

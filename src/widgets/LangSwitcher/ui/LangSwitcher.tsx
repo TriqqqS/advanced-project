@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
-import { Button } from "shared/ui/Button/Button";
+import { Button, ButtonTheme } from "shared/ui/Button/Button";
 
 interface LangSwitcherProps {
   className?: string;
@@ -15,7 +15,11 @@ export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
   };
 
   return (
-    <Button className={classNames("", {}, [className])} onClick={toggle}>
+    <Button
+      className={classNames("", {}, [className])}
+      onClick={toggle}
+      theme={ButtonTheme.BACKGROUND_INVERTED}
+    >
       {t(short ? "langswitcher_short" : "langswitcher")}
     </Button>
   );
