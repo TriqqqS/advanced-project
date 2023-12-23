@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
 import MainPage from "./MainPage";
+import { StoreDecorator } from "shared/config/storybook/StoreDecorator";
 
 const meta = {
   title: "pages/MainPage",
@@ -11,6 +12,7 @@ const meta = {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
+  decorators: [StoreDecorator],
   argTypes: {},
 } satisfies Meta<typeof MainPage>;
 
