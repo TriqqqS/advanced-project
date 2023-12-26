@@ -20,6 +20,8 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children, initialTheme }) => {
     [theme]
   );
 
+  document.body.className = theme;
+
   return <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>;
 };
 
