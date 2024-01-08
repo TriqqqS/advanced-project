@@ -9,6 +9,7 @@ const config: Config = {
   moduleNameMapper: {
     "\\.(svg)$": "<rootDir>config/jest/jestEmptyComponent.tsx",
     "\\.(s?css)$": "identity-obj-proxy",
+    "^entities/(.*)$": "<rootDir>/src/entities/$1",
   },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -78,10 +79,10 @@ const config: Config = {
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
 
+  modulePaths: ["<rootDir>/src/"],
+
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: ["node_modules"],
-
-  modulePaths: ["<rootDir>src/"],
 
   // An array of file extensions your modules use
   moduleFileExtensions: ["js", "mjs", "cjs", "jsx", "ts", "tsx", "json", "node"],
@@ -134,7 +135,7 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ["<rootDir>config/jest/jest-setup.ts"],
+  setupFilesAfterEnv: ["<rootDir>/config/jest/jest-setup.ts"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
