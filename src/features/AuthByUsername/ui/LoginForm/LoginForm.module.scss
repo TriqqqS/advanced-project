@@ -1,0 +1,16 @@
+.loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+.loginBtn {
+  width: 350px;
+  margin-top: 15px;
+  // margin-left: auto;
+}

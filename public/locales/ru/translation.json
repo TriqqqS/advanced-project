@@ -10,5 +10,7 @@
   "Toggle": "Переключить",
   "Main page": "Главная",
   "About us": "О сайте",
-  "Sign In": "Войти"
+  "Sign In": "Войти",
+  "Enter username": "Введите логин",
+  "Enter password": "Введите пароль"
 }
