@@ -8,6 +8,9 @@ interface StoreProviderProps {
   isDev?: boolean;
 }
 
+const store = createReduxStore();
+export type AppDispatch = typeof store.dispatch;
+
 export const StoreProvider = (props: StoreProviderProps) => {
   const { children, initialState, isDev } = props;
 

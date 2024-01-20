@@ -4,7 +4,7 @@ import { UserSchema } from "../types/user";
 const initialState: UserSchema = {};
 
 export const userSlice = createSlice({
-  name: "counter",
+  name: "user",
   initialState: initialState,
   reducers: {},
 });
