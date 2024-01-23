@@ -1,8 +1,10 @@
-export interface User {
+interface User {
   id: string;
   username: string;
 }
 
-export interface UserSchema {
+interface UserSchema {
   authData?: User;
 }
+
+export type { User, UserSchema };

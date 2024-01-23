@@ -9,6 +9,7 @@ import { loginActions } from "../../model/slice/loginSlice";
 import { getLoginState } from "../../model/selectors/getLoginState";
 import { loginByUsername } from "../../model/services/loginByUsername/loginByUsername";
 import { AppDispatch } from "app/providers/StoreProvider/ui/StoreProvider";
+import { Text, TextTheme } from "shared/ui/Text/Text";
 
 interface LoginFormProps {
   className?: string;
@@ -18,7 +19,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
   const { className } = props;
   const { t } = useTranslation();
   const dispatch: AppDispatch = useDispatch();
-  const { username, password } = useSelector(getLoginState);
+  const { username, password, error, isLoading } = useSelector(getLoginState);
 
   const onChangeUsername = useCallback(
     (value: string) => {
@@ -40,6 +41,8 @@ export const LoginForm = memo((props: LoginFormProps) => {
 
   return (
     <div className={classNames(cls.loginform, {}, [className])}>
+      <Text title={t("Login form")} />
+      {error && <Text text={error} theme={TextTheme.ERROR} />}
       <Input
         className={cls.input}
         placeholder={t("Enter username")}
@@ -55,7 +58,12 @@ export const LoginForm = memo((props: LoginFormProps) => {
         onChange={onChangePassword}
         value={password}
       />
-      <Button theme={ButtonTheme.OUTLINE} className="loginBtn" onClick={onLoginClick}>
+      <Button
+        theme={ButtonTheme.OUTLINE}
+        className="loginBtn"
+        disabled={isLoading}
+        onClick={onLoginClick}
+      >
         {" "}
         {t("Sign In")}
       </Button>
